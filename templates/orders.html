@@ -1,0 +1,158 @@
+{% extends 'header.html' %}
+{% block css %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+          integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+          crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="../static/style/orders.min.css">
+{% endblock %}
+{% block content %}
+    <div class="top">
+        <div class="top_h1">My Orders</div>
+    </div>
+    <div class="bottom">
+        <div class="bottom_left">
+            <div class="bottom_left_top">
+                <div class="bottom_left_top_img">
+                    <img class="bottom_left_top_img_img" src="{{ user.photo }}" alt="opa">
+                </div>
+                <h4 class="bottom_left_top_h4">
+                    {{ user.name }} {{ user.surname }}
+                    <span class="bottom_left_top_h4_span">{{ user.gmail }}</span>
+                </h4>
+            </div>
+            <div class="bottom_left_center">
+                <ul class="bottom_left_center_ul">
+                    <li class="bottom_left_center_ul_li"
+                    >
+                        <i class="fa fa-user bottom_left_center_ul_li_i"></i>
+                        <a href="{{ url_for('profile') }}" class="bottom_left_center_ul_li_a">My Profile</a></li>
+
+                    <li class="bottom_left_center_ul_li"
+                        style="padding: 5px 10px;display: block;color: white;  border-radius: 6px;  -moz-border-radius: 6px ; -webkit-border-radius: 6px; background: #78ca5c;">
+                        <i style="color: white" class="fa fa-calendar bottom_left_center_ul_li_i"></i><a style="color: white"
+                                                                                                    href="{{ url_for('orders') }}"
+                                                                                                    class="bottom_left_center_ul_li_a">
+                     My Orders   </a></li>
+                            <li class="bottom_left_center_ul_li"><i class="fa fa-car bottom_left_center_ul_li_i"></i><a
+                            href="{{ url_for('liked') }}" class="bottom_left_center_ul_li_a">My Favorite Cars</a></li>
+                    <li class="bottom_left_center_ul_li"><i class="fa fa-sign-out bottom_left_center_ul_li_i"></i><a
+                            href="{{ url_for('singout') }}" class="bottom_left_center_ul_li_a">Sign Out</a></li>
+                </ul>
+            </div>
+            <div class="bottom_left_right">
+
+            </div>
+        </div>
+        <div class="hellp">
+            <h1 class="hellp_h1">Orders</h1>
+        <table class="bottom_table">
+<tr class="bottom_table_thead_tr">
+<th class="bottom_table_thead_tr_th"  scope="col"><span class="bottom_table_thead_tr_th_span">ORDER ID</span></th>
+    <th class="bottom_table_thead_tr_th" scope="col"><span class="bottom_table_thead_tr_th_span">CAR NAME</span></th>
+    <th class="bottom_table_thead_tr_th" scope="col"><span class="bottom_table_thead_tr_th_span">PICK UP LOCATION</span></th>
+    <th class="bottom_table_thead_tr_th" scope="col"><span class="bottom_table_thead_tr_th_span">DROP OFF LOCATION</span></th>
+    <th class="bottom_table_thead_tr_th" scope="col"><span class="bottom_table_thead_tr_th_span">PICK UP DATE</span></th>
+    <th class="bottom_table_thead_tr_th" scope="col"><span class="bottom_table_thead_tr_th_span">RETURN DATA</span></th>
+    <th class="bottom_table_thead_tr_th" scope="col"><span class="bottom_table_thead_tr_th_span">STATUS</span></th>
+</tr>
+            {% for order in order %}
+              <tr class="bottom_table_tbody_tr">
+                    <td class="bottom_table_tbody_tr_td">
+                        <div class="bottom_table_tbody_tr_td_div">#{{ order.id }}</div>
+                    </td>
+                         <td class="bottom_table_tbody_tr_td">
+                        <div class="bottom_table_tbody_tr_td_h1">	{{ order.car.name }}</div>
+                    </td>
+                           <td class="bottom_table_tbody_tr_td">
+                        <div class="bottom_table_tbody_tr_td_h2"> {{ order.pic_locatin }}</div>
+                    </td>
+                         <td class="bottom_table_tbody_tr_td">
+                        <div class="bottom_table_tbody_tr_td_h2">	{{ order.take_locatin }}</div>
+                    </td>
+                         <td class="bottom_table_tbody_tr_td">
+                        <div class="bottom_table_tbody_tr_td_h2"> {{ order.pic_data }}</div>
+                    </td>
+                         <td class="bottom_table_tbody_tr_td">
+                        <div class="bottom_table_tbody_tr_td_h2">{{ order.take_data }}</div>
+                    </td>
+                {% if order.status =='scheduled' %}
+                      <td class="bottom_table_tbody_tr_td">
+
+
+                            <div class="bottom_table_tbody_tr_td_divs">	scheduled</div>
+                      </td>
+
+               {% endif %}
+                  {% if order.status =='completed' %}
+                   <td class="bottom_table_tbody_tr_td">
+
+
+
+
+                            <div class="bottom_table_tbody_tr_td_divs" style="background: #00b74a">	completed</div>
+
+                    </td>
+                {% endif %}
+                  {% if order.status =='cancelled' %}
+                   <td class="bottom_table_tbody_tr_td">
+
+
+
+
+                            <div class="bottom_table_tbody_tr_td_divs" style="background: #f93154">	cancelled</div>
+
+                    </td>
+                {% endif %}
+                </tr>
+            {% endfor %}
+
+
+
+
+        </table>
+    </div></div>
+    <footer>
+        <div class="about">
+            <div class="about_h1">About Rentaly</div>
+            <div class="about_p">In tempor magna non ut labore sunt et in adipisicing do in proident veniam officia
+                deserunt mollit velit aliquip sint fugiat reprehenderit sint anim pariatur deserunt id in ut non.
+            </div>
+        </div>
+        <div class="contack">
+            <div class="contack_h1">Contack info</div>
+            <div class="contack_loc">
+                <svg class="contack_loc_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                    <!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                    <path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/>
+                </svg>
+                <div class="contack_loc_h1">Toshkent ,Mirzo Ulugbek</div>
+            </div>
+            <div class="contack_num">
+                <svg class="contack_num_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                    <!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                    <path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/>
+                </svg>
+                <div class="contack_num_h1">+998950017622</div>
+            </div>
+            <div class="contack_gmail">
+                <svg class="contack_gmail_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                    <!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                    <path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/>
+                </svg>
+                <div class="contack_gmail_h1">shahzodomonboyev0@gmail.com</div>
+            </div>
+        </div>
+        <div class="quic">
+            <div class="quic_h1">Quick links</div>
+            <div class="quic_h2">About</div>
+            <div class="quic_h2">Blog</div>
+            <div class="quic_h2">News</div>
+            <div class="quic_h2">Partners</div>
+        </div>
+    </footer>
+    <script>
+   widht = document.querySelector(".bottom").clientHeight,
+        foot = document.querySelector("footer")
+    foot.style.top = `${widht+470}px`
+    </script>
+{% endblock %}

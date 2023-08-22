@@ -1,0 +1,41 @@
+{% extends 'header.html' %}
+{% block css %}
+    <link rel="stylesheet" href="../static/style/edit.min.css">
+{% endblock %}
+{% block content %}
+ <div class="madalni">
+            <form class="mad" action="{{ url_for('news_edit',ids=id) }}" method="post" enctype="multipart/form-data">
+
+                <div class="div">
+                    <h1>Who is writing</h1>
+                    <input class="madalni_inputs" type="text" name="name" placeholder="Enter your name">
+                </div>
+                <div class="div">
+                    <h1>What time do you write </h1>
+                    <input class="madalni_inputs" type="text" name="time" placeholder="Enter time">
+                </div>
+                <div class="div">
+                    <h1>What type news</h1>
+                    <input class="madalni_inputs" name="type" type="text" placeholder="Enter news type">
+                </div>
+                <div class="div">
+                    <h1>What is new name</h1>
+                    <input class="madalni_inputs" name="news_name" type="text" placeholder="Enter news name">
+                </div>
+                <div class="div">
+                    <h1>Enter news caption </h1>
+                    <input name="caption" class="madalni_inputs" placeholder="Enter news caption" type="text">
+                </div>
+                <div class="div">
+                    <h1> Enter news text </h1>
+                    <input class="madalni_inputs" name="text" placeholder="Enter news text" type="text">
+                </div>
+                <div class="div">
+                    <h1>Touch button for edit</h1>
+                    <button style="background: #00b74a; color: white; font-size: 15px ; font-weight: 500">Edit</button>
+                </div>
+            </form>
+
+
+        </div>
+{% endblock %}

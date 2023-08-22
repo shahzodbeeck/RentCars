@@ -1,0 +1,549 @@
+*
+  margin: 0
+  padding: 0
+
+.section
+  position: absolute
+  top: 0
+
+  &_video video
+    object-fit: cover
+    width: 1519px
+    height: 100vh
+
+  &_tow
+    width: 1519px
+    position: absolute
+    left: 0
+    top: 0
+
+    &_top
+      height: 600px
+      display: flex
+      justify-content: space-around
+      align-items: center
+
+      &_left
+        color: #ffffff
+
+        &_h3
+          font-size: 25px
+          color: #78ca5c
+
+        &_h1
+          color: white
+          font-size: 52px
+
+        &_p
+          color: white
+          width: 550px
+          font-size: 17px
+
+      &_rigth
+        border-radius: 5px
+        margin-top: 100px
+        width: 800px
+        height: 420px
+        background: rgba(0, 0, 0, 0.5)
+
+        &_title
+          margin-top: 20px
+          font-size: 20px
+          margin-left: 20px
+
+        &_type
+          margin-top: 20px
+          display: flex
+          justify-content: space-around
+          align-items: center
+          flex-wrap: wrap
+          width: 700px
+          font-size: 20px
+          color: #fff
+          margin-left: 20px
+
+        &_question
+          display: flex
+          margin-top: 20px
+
+          &_h1
+            margin-left: 50px
+
+          &_h2
+            margin-left: 230px
+
+        &_location
+          display: flex
+          justify-content: space-around
+          align-items: center
+
+          &_input, &_input:focus
+            color: black
+            background: none
+            width: 300px
+            height: 30px
+            border-radius: 5px
+            outline: none
+            border: 1px solid white
+
+        &_data
+          margin-top: 20px
+          display: flex
+
+          &_h1
+            margin-left: 47px
+
+          &_h2
+            margin-left: 180px
+
+        &_input
+          margin-top: 20px
+          display: flex
+          justify-content: space-around
+          align-items: center
+
+          &_input, &_input:focus
+            color: black
+            background: none
+            width: 300px
+            height: 30px
+            border-radius: 5px
+            outline: none
+            border: 1px solid white
+
+        &_button
+          margin-top: 30px
+          margin-left: 670px
+          border: none
+          display: flex
+          justify-content: center
+          align-items: center
+          background: rgb(120, 202, 92)
+          width: 120px
+          height: 40px
+          border-radius: 5px
+
+        &_button:hover
+          box-shadow: 0 0 5px 0 #78ca5c
+
+    &_bottom
+      position: relative
+      margin-top: 100px
+      height: 50px
+      background: none
+      display: flex
+      overflow: hidden
+
+      &_h1s
+        color: #199e1c
+        position: absolute
+        left: 20px
+        width: 1819px
+        justify-content: space-around
+        align-items: center
+        display: flex
+        font-size: 30px
+        animation: shahzod 10s linear infinite
+
+@keyframes shahzod
+  100%
+    position: absolute
+    left: -300px
+
+.section2
+  width: 1519px
+  top: 745px
+  background: white
+  position: absolute
+  height: 700px
+
+  &_titles
+    margin-top: 20px
+    display: flex
+    justify-content: space-around
+    flex-direction: column
+    height: 100px
+    align-items: center
+
+    &_title
+      color: #3F4254
+      font-size: 50px
+
+    &_about
+      width: 500px
+      font-size: 17px
+      color: #727272
+
+  &_cars
+    overflow: hidden
+    &_main
+      margin-top: 50px
+      position: relative
+      width: 4000px
+      height: 408px
+      &_prev
+        display: flex
+        justify-content: center
+        align-items: center
+        z-index: 1
+        font-size: 30px
+        left: 10px
+        top: 170px
+        position: absolute
+        width: 50px
+        height: 50px
+        border-radius: 50%
+        background: white
+        color: black
+      &_next
+        display: flex
+        justify-content: center
+        align-items: center
+        z-index: 1
+        font-size: 30px
+        left: 1460px
+        top: 170px
+        position: absolute
+        width: 50px
+        height: 50px
+        border-radius: 50%
+        background: white
+        color: black
+      &_divs
+        transition: transform 1s ease-in-out
+        transform: translateX(0)
+        display: flex
+        width: 100%
+        height: 100%
+        background-repeat: no-repeat
+        justify-content: space-around
+        &_car
+          display: flex
+          align-items: center
+          justify-content: space-around
+          flex-direction: column
+          box-shadow: 3px 3px 9px rgba(164,164,186,0.2)
+          border: solid 1px #dddddd
+          font-size: 30px
+          color: white
+          background: white
+          width: 418px
+          height: 405px
+          border-radius: 5px
+          &_img
+            transition: 0.5s ease-in-out
+            overflow: hidden
+            width: 387px
+            height: 217px
+            background: url("../icons/bmw-m5.jpg")
+            background-size: cover
+            border-radius: 5px
+          &_img:hover
+            padding: 2px
+
+          &_name
+            width: 414px
+            display: flex
+            justify-content: space-around
+            align-items: center
+            &_text
+              display: flex
+              justify-content: space-around
+              align-items: center
+              flex-direction: column
+              height: 160px
+            &_name
+              align-self: flex-start
+              font-size: 25px
+              color: #3f4254
+            &_like
+              font-size: 17px
+              color: #727272
+          &_tools
+            margin-left: -50px
+            width: 270px
+            display: flex
+            height: 100px
+            &_1
+              display: flex
+              width: 50px
+              height: 20px
+              font-size: 18px
+              color: #727272
+              &_img
+                width: 20px
+            &_2
+              display: flex
+              width: 50px
+              height: 20px
+              font-size: 18px
+              color: #727272
+              &_img
+                width: 20px
+            &_3
+              display: flex
+              width: 50px
+              height: 20px
+              font-size: 18px
+              color: #727272
+              &_img
+                width: 20px
+            &_4
+              display: flex
+              width: 50px
+              height: 20px
+              font-size: 18px
+              color: #727272
+              &_img
+                width: 20px
+          &_line
+            width: 387px
+            background: #727272
+            height: 1px
+          &_prise
+            display: flex
+            justify-content: space-around
+            align-items: center
+            width: 387px
+            &_prise
+              height: 100px
+              width: 200px
+              &_1
+                font-size: 15px
+                color: #727272
+              &_2
+                font-size: 40px
+                color: black
+            &_rent
+              display: flex
+              justify-content: center
+              align-items: center
+              height: 30px
+              border-radius: 5px
+              width: 150px
+              background: #199e1c
+              &_a
+                font-size: 20px
+                color: white
+                text-decoration: none
+.section3
+  top: 1400px
+  position: absolute
+  width: 1519px
+  height: 100vh
+  background: white
+  &_about
+    display: flex
+    justify-content: space-around
+    align-items: center
+    flex-direction: column
+    height: 100px
+    &_title
+      color: #3f4254
+      font-size: 50px
+    &_about
+      color: #727272
+      font-size: 15px
+      width: 400px
+  &_news
+    margin-top: 50px
+    width: 1519px
+    display: flex
+    justify-content: space-around
+    align-items: center
+    flex-wrap: wrap
+    &_new
+      background: url("../icons/pic-blog-1.jpg")
+      background-size: cover
+      position: relative
+      width: 409.33px
+      height: 272.88px
+      &_text
+        display: flex
+        flex-direction: column
+        justify-content: space-around
+        top: 236px
+        position: absolute
+        left: 20px
+        width: 369.33px
+        height: 236px
+        background: white
+        &_h1
+          margin-left: 30px
+          color: #1a1c26
+          font-size: 25px
+        &_p
+          font-size: 20px
+          color: #727272
+          margin-left: 30px
+        &_a
+          width: 150px
+          height: 30px
+          border-radius: 5px
+          background: #78ca5c
+          display: flex
+          justify-content: center
+          align-items: center
+          font-size: 20px
+          color: white
+          text-decoration: none
+.section4
+  background: white
+  position: absolute
+  top: 2100px
+  height: 100vh
+  width: 1519px
+  &_imgs
+    display: flex
+    &_img
+      width: 506.39px
+      height: 759.58px
+      background: url("../icons/1.jpg")
+      background-size: cover
+      position: relative
+      opacity: 0.7
+      &_svg
+        width: 50px
+        height: 60px
+        color: #78ca5c
+        position: absolute
+        top: 20px
+        fill: #78ca5c
+        right: 30px
+      &_h1
+        position: absolute
+        top: 100px
+        left: 30px
+        color: #ffffff
+        font-size: 25px
+      &_p
+        position: absolute
+        top: 150px
+        left: 30px
+        font-size: 18px
+        color: #fff
+        width: 450px
+      &_h2
+        position: absolute
+        top: 300px
+        left: 30px
+        font-size: 20px
+        color: #fff
+    &_img:nth-child(1)
+      width: 506.39px
+      height: 759.58px
+      background: url("../icons/1.jpg")
+      background-size: cover
+    &_img:nth-child(2)
+      width: 506.39px
+      height: 759.58px
+      background: url("../icons/2.jpg")
+      background-size: cover
+    &_img:nth-child(3)
+      width: 506.39px
+      height: 759.58px
+      background: url("../icons/3.jpg")
+      background-size: cover
+.section5
+  position: absolute
+  top: 2859px
+  width: 1519px
+  height: 250px
+  background: #199e1c
+  display: flex
+  justify-content: space-around
+  &_left
+    margin-top: 40px
+    &_h1
+      color: white
+      font-size: 40px
+  &_right
+    margin-top: 20px
+    display: flex
+    justify-content: space-around
+    flex-direction: column
+    align-items: center
+    height: 200px
+    &_call
+      width: 50px
+      height: 50px
+      fill: white
+    &_h5
+      width: 150px
+      font-size: 20px
+      color: white
+    &_h1
+      font-size: 30px
+      color: white
+    &_a
+      width: 100px
+      height: 30px
+      border-radius: 5px
+      background: #78ca5c
+      color: white
+      font-size: 15px
+      font-weight: 150
+      display: flex
+      justify-content: center
+      align-items: center
+    &_a:hover
+      box-shadow: 0 0 5px 0 #78ca5c
+footer
+  position: absolute
+  width: 1519px
+  height: 300px
+  background: black
+  top: 3109px
+  display: flex
+  justify-content: space-around
+  align-items: center
+.about
+  &_h1
+    font-size: 30px
+    color: white
+  &_p
+    width: 300px
+    font-size: 17px
+    color: white
+.contack
+  &_h1
+    font-size: 30px
+    color: white
+  &_loc
+    margin-top: 5px
+    display: flex
+    &_icon
+      width: 30px
+      height: 30px
+      fill: #199e1c
+    &_h1
+      color: white
+      font-size: 20px
+  &_num
+    margin-top: 5px
+    display: flex
+    &_icon
+      width: 30px
+      height: 30px
+      fill: #199e1c
+    &_h1
+      color: white
+      font-size: 20px
+  &_gmail
+    margin-top: 5px
+    display: flex
+    &_icon
+      width: 30px
+      height: 30px
+      fill: #199e1c
+    &_h1
+      color: white
+      font-size: 20px
+.quic
+  &_h1
+    color: white
+    font-size: 30px
+  &_h2
+    margin-top: 5px
+    color: white
+    font-size: 20px

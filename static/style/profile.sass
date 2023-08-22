@@ -1,0 +1,244 @@
+body
+  background: #F5F8FA
+footer
+  position: absolute
+  width: 1519px
+  height: 300px
+  background: black
+  top: 950px
+  display: flex
+  justify-content: space-around
+  align-items: center
+
+.about
+  &_h1
+    font-size: 30px
+    color: white
+
+  &_p
+    width: 300px
+    font-size: 17px
+    color: white
+
+.contack
+  &_h1
+    font-size: 30px
+    color: white
+
+  &_loc
+    margin-top: 5px
+    display: flex
+
+    &_icon
+      width: 30px
+      height: 30px
+      fill: #199e1c
+
+    &_h1
+      color: white
+      font-size: 20px
+
+  &_num
+    margin-top: 5px
+    display: flex
+
+    &_icon
+      width: 30px
+      height: 30px
+      fill: #199e1c
+
+    &_h1
+      color: white
+      font-size: 20px
+
+  &_gmail
+    margin-top: 5px
+    display: flex
+
+    &_icon
+      width: 30px
+      height: 30px
+      fill: #199e1c
+
+    &_h1
+      color: white
+      font-size: 20px
+
+.quic
+  &_h1
+    color: white
+    font-size: 30px
+
+  &_h2
+    margin-top: 5px
+    color: white
+    font-size: 20px
+.top
+  position: absolute
+  top: 0
+  left: 0
+  display: flex
+  justify-content: center
+  align-items: center
+  background: url("../icons/bgs.jpg")
+  background-size: cover
+  width: 1519px
+  height: 270px
+
+  &_h1
+    font-size: 50px
+    color: white
+.bottom
+  display: flex
+  position: absolute
+  left: 109.5px
+  top: 360px
+  width: 1300px
+  height: 496px
+  //background: #78ca5c
+  &_left
+    width: 301px
+    height: 466px
+    -webkit-border-radius: 10px
+    //position: relative
+    overflow: hidden
+    box-shadow: 0 10px 20px 0 rgba(0,0,0,.05)
+    background: white
+    &_top
+      display: flex
+      justify-content: center
+      align-items: center
+      flex-direction: column
+      margin-left: 24px
+      width: 253px
+      height: 251px
+      &_img
+
+        text-align: center
+        //margin-left: 24px
+        width: 250px
+        height: 160px
+        &_img
+          width: 150px
+          height: 150px
+          border-radius: 50%
+          border: solid 3px #78ca5c
+          object-fit: cover
+          padding: 6px
+      &_h4
+        margin-top: 15px
+        text-align: center
+        display: block
+        //margin-left: 45.5px
+        font-size: 20px
+        line-height: 1.3em
+        font-weight: 600
+        color: #3F4254
+        font-family: "Outfit", Helvetica, Arial, sans-serif
+        &_span
+          //margin-left: -10px
+          font-size: 16px
+          font-weight: 600
+          color: #acacac
+    &_center
+      margin-top: 10px
+      margin-left: 24px
+      width: 253px
+      height: 186px
+      &_ul
+        display: flex
+        width: 253px
+        justify-content: space-around
+        align-items: center
+        flex-direction: column
+        height: 186px
+        list-style: none
+        &_li
+          width: 253px
+          text-align: -webkit-match-parent
+          &_i
+            margin-left: 10px
+            color: #78ca5c
+            font-size: 20px
+          &_a
+            text-decoration: none
+            margin-left: 20px
+            width: 253px
+            height: 37.2px
+            font-size: 19px
+            color: #333333
+        &_li:nth-child(1)
+          padding: 5px 10px
+          display: block
+          color: white
+          border-radius: 6px
+          -moz-border-radius: 6px
+          -webkit-border-radius: 6px
+          background: #78ca5c
+  &_right
+    margin-left: 20px
+    width: 951px
+    height: 477.2px
+    background: white
+    -webkit-border-radius: 10px
+    position: relative
+    overflow: hidden
+    box-shadow: 0 10px 20px 0 rgba(0,0,0,.05)
+    &_row
+      display: flex
+      flex-wrap: wrap
+      &_d1
+        margin-top: 20px
+        width: 463.5px
+        height: 82px
+        &_h4
+          margin-left: 20px
+          margin-top: 20px
+          font-family: Outfit, Helvetica, Arial, sans-serif
+          font-weight: 600
+          color: #3F4254
+          &_input ,&_input:focus
+            margin-left: 20px
+            margin-top: 10px
+            outline: none
+            font-size: 18px
+            width: 439.5px
+            height: 44.8px
+            //padding: 8px
+            border: solid 2px #eeeeee
+            background: rgba(0, 0, 0, .025)
+            border-radius: 6px
+            -moz-border-radius: 6px
+            -webkit-border-radius: 6px
+            box-shadow: none
+            -moz-box-shadow: none
+            -webkit-box-shadow: none
+            color: #333
+        &_a
+          margin-left: 20px
+          margin-top: 20px
+          background: #78ca5c
+          font-family: Outfit, Helvetica, Arial, sans-serif
+          text-align: center
+          color: #fff
+          outline: 0
+          display: flex
+          justify-content: center
+          align-items: center
+          font-weight: 800
+          text-decoration: none
+          padding: 4px 30px 4px 30px
+          font-size: 14px
+          border: none
+          border-radius: 3px
+          -moz-border-radius: 3px
+          -webkit-border-radius: 3px
+          width: 170.55px
+          height: 38.2px
+        &_a:hover
+          box-shadow: 2px 2px 20px 0 #78ca5c
+
+
+::placeholder
+  margin-left: 20px
+  font-size: 20px

@@ -1,0 +1,116 @@
+footer {
+  position: absolute;
+  width: 1519px;
+  height: 300px;
+  background: black;
+  top: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.about_h1 {
+  font-size: 30px;
+  color: white;
+}
+.about_p {
+  width: 300px;
+  font-size: 17px;
+  color: white;
+}
+
+.contack_h1 {
+  font-size: 30px;
+  color: white;
+}
+.contack_loc {
+  margin-top: 5px;
+  display: flex;
+}
+.contack_loc_icon {
+  width: 30px;
+  height: 30px;
+  fill: #199e1c;
+}
+.contack_loc_h1 {
+  color: white;
+  font-size: 20px;
+}
+.contack_num {
+  margin-top: 5px;
+  display: flex;
+}
+.contack_num_icon {
+  width: 30px;
+  height: 30px;
+  fill: #199e1c;
+}
+.contack_num_h1 {
+  color: white;
+  font-size: 20px;
+}
+.contack_gmail {
+  margin-top: 5px;
+  display: flex;
+}
+.contack_gmail_icon {
+  width: 30px;
+  height: 30px;
+  fill: #199e1c;
+}
+.contack_gmail_h1 {
+  color: white;
+  font-size: 20px;
+}
+
+.quic_h1 {
+  color: white;
+  font-size: 30px;
+}
+.quic_h2 {
+  margin-top: 5px;
+  color: white;
+  font-size: 20px;
+}
+
+.top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1519px;
+  height: 300px;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("../icons/subheader.jpg");
+}
+.top_h1 {
+  font-size: 50px;
+  color: white;
+}
+
+.bottom {
+  width: 1519px;
+  position: absolute;
+  top: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bottom_new {
+  width: 842.66px;
+}
+.bottom_new_photo {
+  background: url("../icons/big.jpg");
+  width: 842.66px;
+  height: 561.06px;
+}
+.bottom_new_text {
+  margin-top: 30px;
+  font-size: 20px;
+  width: 842.66px;
+  color: #727272;
+}
+
+/*# sourceMappingURL=new.css.map */

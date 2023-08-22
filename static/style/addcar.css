@@ -1,0 +1,81 @@
+body {
+  background: rgba(245, 248, 250, 0.71);
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  background: black;
+}
+
+.red {
+  display: none;
+  transition: 1s;
+}
+
+.bottom_new:hover .red {
+  display: flex;
+  cursor: pointer;
+}
+
+.madalni {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1519px;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  top: 350px;
+}
+.madalni_inputs:focus {
+  background: rgba(25, 158, 28, 0.13);
+  outline: none;
+  box-shadow: 0 0 2px 2px #78ca5c;
+}
+.madalni_inputs, .madalni button {
+  margin-top: 20px;
+  width: 439.5px;
+  height: auto;
+  border-radius: 5px;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: solid 2px #eeeeee;
+  background: rgba(0, 0, 0, 0.025);
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  color: #333;
+}
+
+.mad {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 1519px;
+  height: 1300px;
+  position: relative;
+}
+
+.div {
+  margin-top: 10px;
+  width: 463.5px;
+  height: 82px;
+}
+
+.div h1 {
+  font-family: Outfit, Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  color: #3f4254;
+}
+
+option, select {
+  border: none;
+  outline: none;
+  font-size: 15px;
+}
+
+/*# sourceMappingURL=addcar.css.map */

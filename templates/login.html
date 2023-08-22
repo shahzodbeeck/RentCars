@@ -1,0 +1,27 @@
+{% extends 'header.html' %}
+{% block css %}
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+          integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="../static/style/login.min.css">
+{% endblock %}
+{% block content %}
+<section class="section">
+    <form class="section_form" action="{{ url_for('login') }}" method="post">
+          <div class="section_form_title">
+              Login
+          </div>
+        <div class="section_form_inputs">
+            <input type="text" placeholder="Your usernama" name="username">
+            <input type="text" placeholder="Your password" name="password">
+            <button class="section_form_inputs_button">Login</button>
+               </div>
+<h1>{{ error }}</h1>
+        <div class="section_form_or">
+            <div class="section_form_or_line"></div>
+            <a href="{{ url_for('reg') }}" class="section_form_or_a">Or regestratsion in</a>
+            <div class="section_form_or_line"></div>
+        </div>
+    </div>
+   </form>
+</section>
+{% endblock %}

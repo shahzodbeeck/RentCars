@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  position: relative;
+  height: 100vh;
+}
+
+header {
+  position: fixed;
+  left: 0;
+  top: 10px;
+  z-index: 1;
+  width: 1519px;
+}
+
+nav {
+  width: 1519px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.icon {
+  width: 200px;
+  height: 70px;
+  background: url("../icons/logo-light.png");
+  background-size: cover;
+}
+
+.links {
+  width: 500px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.links_a {
+  text-decoration: none;
+  font-size: 30px;
+  color: #78ca5c;
+}
+
+.log {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(120, 202, 92);
+  width: 120px;
+  height: 40px;
+  border-radius: 5px;
+}
+.log_a {
+  text-decoration: none;
+  font-size: 20px;
+  color: #fff;
+}
+
+.log:hover {
+  box-shadow: 0 0 5px 0 #78ca5c;
+}
+
+/*# sourceMappingURL=header.css.map */

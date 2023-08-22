@@ -1,0 +1,31 @@
+{% extends 'header.html' %}
+{% block css %}
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+          integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="../static/style/reg.min.css">
+{% endblock %}
+{% block content %}
+<section class="section">
+    <form class="section_form" action="{{ url_for('reg') }}" method="post" enctype="multipart/form-data">
+          <div class="section_form_title">
+              Registration
+          </div>
+        <div class="section_form_inputs">
+             <input type="text" placeholder="Your name" name="name">
+             <input type="text" placeholder="Your surname" name="surname">
+            <input type="text" placeholder="Your username" name="username">
+         <h3 style="color: red; font-size: 15px; margin-bottom: 10px">  {{ eror }}</h3>
+            <input type="text" placeholder="Your password" name="password">
+            <input type="text" placeholder="Your gmail" name="gmail">
+            <input type="file" placeholder="Your photo" name="photo">
+            <button class="section_form_inputs_button">Registration</button>
+        </div>
+        <div class="section_form_or">
+            <div class="section_form_or_line"></div>
+            <a href="{{ url_for('login') }}" class="section_form_or_a">Or sing in</a>
+            <div class="section_form_or_line"></div>
+        </div>
+    </form>
+
+</section>
+{% endblock %}

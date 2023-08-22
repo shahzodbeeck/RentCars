@@ -1,0 +1,245 @@
+.top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1519px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("../icons/bg.jpg");
+  background-size: cover;
+}
+.top_h1 {
+  font-size: 50px;
+  color: white;
+}
+
+.bottom {
+  position: absolute;
+  top: 300px;
+  left: 65.5px;
+  width: 1400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bottom_brands {
+  margin-top: 100px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.bottom_brands_brand {
+  margin-top: 20px;
+  width: 300px;
+  height: 160px;
+  background: #F5F8FA;
+  box-shadow: 3px 3px 9px rgba(164, 164, 186, 0.2);
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bottom_brands_brand_icon {
+  width: 100px;
+  height: 100px;
+}
+
+.red {
+  display: none;
+  transition: 1s;
+}
+
+.bottom_new:hover .red {
+  display: flex;
+  cursor: pointer;
+}
+
+.madalni {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.28);
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+.madalni_inputs:focus {
+  background: rgba(25, 158, 28, 0.13);
+  outline: none;
+  box-shadow: 0 0 2px 2px #78ca5c;
+}
+.madalni_inputs, .madalni button {
+  margin-top: 20px;
+  width: 439.5px;
+  height: auto;
+  border-radius: 5px;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: solid 2px #eeeeee;
+  background: rgba(0, 0, 0, 0.025);
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  color: #333;
+}
+
+.mad {
+  background: white;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 951px;
+  height: 550.2px;
+  -webkit-border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.05);
+}
+
+.mad2 {
+  background: white;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 951px;
+  height: 550.2px;
+  -webkit-border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.05);
+}
+
+.div {
+  margin-top: 10px;
+  width: 463.5px;
+  height: 82px;
+}
+
+.div h1 {
+  font-family: Outfit, Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  color: #3f4254;
+}
+
+.madalni2 {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.28);
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+.madalni2_inputs:focus {
+  background: rgba(25, 158, 28, 0.13);
+  outline: none;
+  box-shadow: 0 0 2px 2px #78ca5c;
+}
+.madalni2_inputs, .madalni2 button {
+  margin-top: 20px;
+  width: 439.5px;
+  height: auto;
+  border-radius: 5px;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: solid 2px #eeeeee;
+  background: rgba(0, 0, 0, 0.025);
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  color: #333;
+}
+
+footer {
+  position: absolute;
+  width: 1519px;
+  height: 300px;
+  background: black;
+  top: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.about_h1 {
+  font-size: 30px;
+  color: white;
+}
+.about_p {
+  width: 300px;
+  font-size: 17px;
+  color: white;
+}
+
+.contack_h1 {
+  font-size: 30px;
+  color: white;
+}
+.contack_loc {
+  margin-top: 5px;
+  display: flex;
+}
+.contack_loc_icon {
+  width: 30px;
+  height: 30px;
+  fill: #199e1c;
+}
+.contack_loc_h1 {
+  color: white;
+  font-size: 20px;
+}
+.contack_num {
+  margin-top: 5px;
+  display: flex;
+}
+.contack_num_icon {
+  width: 30px;
+  height: 30px;
+  fill: #199e1c;
+}
+.contack_num_h1 {
+  color: white;
+  font-size: 20px;
+}
+.contack_gmail {
+  margin-top: 5px;
+  display: flex;
+}
+.contack_gmail_icon {
+  width: 30px;
+  height: 30px;
+  fill: #199e1c;
+}
+.contack_gmail_h1 {
+  color: white;
+  font-size: 20px;
+}
+
+.quic_h1 {
+  color: white;
+  font-size: 30px;
+}
+.quic_h2 {
+  margin-top: 5px;
+  color: white;
+  font-size: 20px;
+}
+
+/*# sourceMappingURL=brands.css.map */

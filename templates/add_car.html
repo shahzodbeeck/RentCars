@@ -1,0 +1,146 @@
+{% extends 'header.html' %}
+{% block css %}
+    <link rel="stylesheet" href="../static/style/addcar.min.css">
+{% endblock %}
+{% block content %}
+    <div class="madalni">
+        <form class="mad" action="{{ url_for('cars_add') }}" method="post" enctype="multipart/form-data">
+
+            <div class="div">
+                <h1>Car name</h1>
+                <input class="madalni_inputs" type="text" name="name" placeholder="Enter car name">
+            </div>
+            <div class="div">
+                <h1>Choice car type</h1>
+                <select class="madalni_inputs" name="type" id="">
+                    {% for type in types %}
+                        <option value="{{ type.id }}">{{ type.name }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="div">
+                <h1>Choice car class</h1>
+                <select class="madalni_inputs" name="classs" id="">
+                    {% for classe in clas %}
+                        <option value="{{ classe.model }}">{{ classe.model }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="div">
+                <h1>About Car</h1>
+                <input class="madalni_inputs" type="text" name="info" placeholder="Enter car info">
+            </div>
+            <div class="div">
+                <h1>Car body</h1>
+                <select class="madalni_inputs" name="body" id="">
+                    <option value="Micro">Micro</option>
+                    <option value="Sedan">Sedan</option>
+                    <option value="Hatchback">Hatchback</option>
+                    <option value="Universal">Universal</option>
+                    <option value="Liftback">Liftback</option>
+                    <option value="Coupe">Coupe</option>
+                    <option value="Cabriolet">Cabriolet</option>
+                    <option value="Roadster">Roadster</option>
+                    <option value="Targa">Targa</option>
+                    <option value="Limousine">Limousine</option>
+                    <option value="Muscle car">Muscle car</option>
+                    <option value="Sport car">Sport car</option>
+                    <option value="Super car">Super car</option>
+                    <option value="SUV">SUV</option>
+                    <option value="Crossover">Crossover</option>
+                    <option value="Pickup">Pickup</option>
+                    <option value="Van">Van</option>
+                    <option value="Minivan">Minivan</option>
+                    <option value="Minibus">Minibus</option>
+                    <option value="Campervan">Campervan</option>
+                </select>
+            </div>
+            <div class="div">
+                <h1>Count car seats </h1>
+                <input class="madalni_inputs" type="text" name="seats" placeholder="Enter caount car seats">
+            </div>
+            <div class="div">
+                <h1>Count car doors</h1>
+                <input class="madalni_inputs" type="text" name="doors" placeholder="Enter count car doors">
+            </div>
+            <div class="div">
+                <h1>Luggage</h1>
+                <input class="madalni_inputs" type="text" name="luggage" placeholder="Enter luggage">
+            </div>
+            <div class="div">
+                <h1>Choice fuel types</h1>
+                <select class="madalni_inputs" name="fuel" id="">
+                    <option value="Gasoline">Gasoline</option>
+                    <option value="Electric">Electric</option>
+                    <option value="Gas">Gas</option>
+                    <option value="Diesel">Diesel</option>
+                </select>
+            </div>
+            <div class="div">
+                <h1>Engine</h1>
+                <input class="madalni_inputs" type="text" name="engine" placeholder="Enter engine">
+            </div>
+            <div class="div">
+                <h1>Year</h1>
+                <input class="madalni_inputs" type="text" name="year" placeholder="Enter car Year">
+            </div>
+            <div class="div">
+                <h1>Mileage</h1>
+                <input class="madalni_inputs" type="text" name="mileage" placeholder="Enter Mileage">
+            </div>
+            <div class="div">
+                <h1>Choice car Transmission</h1>
+                <select class="madalni_inputs" name="transmission" id="">
+                    <option value="Automatic">Automatic</option>
+                    <option value="Mechanics">Mechanics</option>
+                </select>
+            </div>
+            <div class="div">
+                <h1>Drive</h1>
+                <input class="madalni_inputs" type="text" name="drive" placeholder="Enter car Drive">
+            </div>
+            <div class="div">
+                <h1>Fuel Economy</h1>
+                <input class="madalni_inputs" type="text" name="fuel_economy" placeholder="Enter car Fuel Economy">
+            </div>
+            <div class="div">
+                <h1>Exterior Color</h1>
+                <input class="madalni_inputs" type="text" name="exterior_color" placeholder="Enter Exterior Color">
+            </div>
+            <div class="div">
+                <h1>Interior Color</h1>
+                <input class="madalni_inputs" type="text" name="interior_color" placeholder="Enter your name">
+            </div>
+            <div class="div">
+                <h1> Horse power </h1>
+                <input class="madalni_inputs" type="text" name="horse" placeholder="Enter Horse power">
+            </div>
+            <div class="div">
+                <h1>Car prise</h1>
+                <input class="madalni_inputs" name="prise" type="text" placeholder="Enter car prise">
+            </div>
+            <div class="div">
+                <h1>Enter news photo</h1>
+                <input class="madalni_inputs" name="photo1" placeholder="Enter news photo" type="file">
+            </div>
+            <div class="div">
+                <h1>Enter news photo</h1>
+                <input class="madalni_inputs" name="photo2" placeholder="Enter news photo" type="file">
+            </div>
+            <div class="div">
+                <h1>Enter news photo</h1>
+                <input class="madalni_inputs" name="photo3" placeholder="Enter news photo" type="file">
+            </div>
+            <div class="div">
+                <h1>Enter news photo</h1>
+                <input class="madalni_inputs" name="photo4" placeholder="Enter news photo" type="file">
+            </div>
+            <div class="div">
+                <h1>Touch button for add</h1>
+                <button style="background: #00b74a; color: white; font-size: 15px ; font-weight: 500">Add</button>
+            </div>
+        </form>
+
+
+    </div>
+{% endblock %}

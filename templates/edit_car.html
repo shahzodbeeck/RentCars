@@ -1,0 +1,631 @@
+{% extends 'header.html' %}
+{% block css %}
+    <link rel="stylesheet" href="../static/style/addcar.min.css">
+{% endblock %}
+{% block content %}
+    <div class="madalni">
+        <form class="mad" action="{{ url_for('cars_edit',ids=car.id) }}" method="post" enctype="multipart/form-data">
+
+            <div class="div">
+                <h1>Car name</h1>
+                <input class="madalni_inputs" value="{{ car.name }}" type="text" name="name"
+                       placeholder="Enter car name">
+            </div>
+            <div class="div">
+                <h1>Choice car type</h1>
+                <select class="madalni_inputs" name="type" id="">
+                    {% for type in types %}
+                        <option value="{{ type.id }}">{{ type.name }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="div">
+                <h1>Choice car class</h1>
+                <select class="madalni_inputs" name="classs" id="">
+                    {% for classe in clas %}
+                        <option value="{{ classe.model }}">{{ classe.model }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="div">
+                <h1>About Car</h1>
+                <input class="madalni_inputs" type="text" value="{{ car.about }}" name="info"
+                       placeholder="Enter car info">
+            </div>
+            <div class="div">
+                <h1>Car body</h1>
+                <select class="madalni_inputs" name="body" id="">
+                    {% if car.body == "Micro" %}
+                        <option selected value="Micro">Micro</option>
+                        <option value="Sedan">Sedan</option>
+                        <option value="Hatchback">Hatchback</option>
+                        <option value="Universal">Universal</option>
+                        <option value="Liftback">Liftback</option>
+                        <option value="Coupe">Coupe</option>
+                        <option value="Cabriolet">Cabriolet</option>
+                        <option value="Roadster">Roadster</option>
+                        <option value="Targa">Targa</option>
+                        <option value="Limousine">Limousine</option>
+                        <option value="Muscle car">Muscle car</option>
+                        <option value="Sport car">Sport car</option>
+                        <option value="Super car">Super car</option>
+                        <option value="SUV">SUV</option>
+                        <option value="Crossover">Crossover</option>
+                        <option value="Pickup">Pickup</option>
+                        <option value="Van">Van</option>
+                        <option value="Minivan">Minivan</option>
+                        <option value="Minibus">Minibus</option>
+                        <option value="Campervan">Campervan</option>
+                    {% endif %}
+                    {% if car.body == "Sedan" %}
+                        <option value="Micro">Micro</option>
+                        <option selected value="Sedan">Sedan</option>
+                        <option value="Hatchback">Hatchback</option>
+                        <option value="Universal">Universal</option>
+                        <option value="Liftback">Liftback</option>
+                        <option value="Coupe">Coupe</option>
+                        <option value="Cabriolet">Cabriolet</option>
+                        <option value="Roadster">Roadster</option>
+                        <option value="Targa">Targa</option>
+                        <option value="Limousine">Limousine</option>
+                        <option value="Muscle car">Muscle car</option>
+                        <option value="Sport car">Sport car</option>
+                        <option value="Super car">Super car</option>
+                        <option value="SUV">SUV</option>
+                        <option value="Crossover">Crossover</option>
+                        <option value="Pickup">Pickup</option>
+                        <option value="Van">Van</option>
+                        <option value="Minivan">Minivan</option>
+                        <option value="Minibus">Minibus</option>
+                        <option value="Campervan">Campervan</option>
+                    {% endif %}
+                    {% if car.body == "Hatchback" %}
+                        <option value="Micro">Micro</option>
+                        <option value="Sedan">Sedan</option>
+                        <option selected value="Hatchback">Hatchback</option>
+                        <option value="Universal">Universal</option>
+                        <option value="Liftback">Liftback</option>
+                        <option value="Coupe">Coupe</option>
+                        <option value="Cabriolet">Cabriolet</option>
+                        <option value="Roadster">Roadster</option>
+                        <option value="Targa">Targa</option>
+                        <option value="Limousine">Limousine</option>
+                        <option value="Muscle car">Muscle car</option>
+                        <option value="Sport car">Sport car</option>
+                        <option value="Super car">Super car</option>
+                        <option value="SUV">SUV</option>
+                        <option value="Crossover">Crossover</option>
+                        <option value="Pickup">Pickup</option>
+                        <option value="Van">Van</option>
+                        <option value="Minivan">Minivan</option>
+                        <option value="Minibus">Minibus</option>
+                        <option value="Campervan">Campervan</option>
+                    {% endif %}
+                    {% if car.body == "Universal" %}
+                        <option value="Micro">Micro</option>
+                        <option value="Sedan">Sedan</option>
+                        <option value="Hatchback">Hatchback</option>
+                        <option selected value="Universal">Universal</option>
+                        <option value="Liftback">Liftback</option>
+                        <option value="Coupe">Coupe</option>
+                        <option value="Cabriolet">Cabriolet</option>
+                        <option value="Roadster">Roadster</option>
+                        <option value="Targa">Targa</option>
+                        <option value="Limousine">Limousine</option>
+                        <option value="Muscle car">Muscle car</option>
+                        <option value="Sport car">Sport car</option>
+                        <option value="Super car">Super car</option>
+                        <option value="SUV">SUV</option>
+                        <option value="Crossover">Crossover</option>
+                        <option value="Pickup">Pickup</option>
+                        <option value="Van">Van</option>
+                        <option value="Minivan">Minivan</option>
+                        <option value="Minibus">Minibus</option>
+                        <option value="Campervan">Campervan</option>
+                    {% endif %}
+                    {% if car.body == "Liftback" %}
+                        <option value="Micro">Micro</option>
+                        <option value="Sedan">Sedan</option>
+                        <option value="Hatchback">Hatchback</option>
+                        <option value="Universal">Universal</option>
+                        <option selected value="Liftback">Liftback</option>
+                        <option value="Coupe">Coupe</option>
+                        <option value="Cabriolet">Cabriolet</option>
+                        <option value="Roadster">Roadster</option>
+                        <option value="Targa">Targa</option>
+                        <option value="Limousine">Limousine</option>
+                        <option value="Muscle car">Muscle car</option>
+                        <option value="Sport car">Sport car</option>
+                        <option value="Super car">Super car</option>
+                        <option value="SUV">SUV</option>
+                        <option value="Crossover">Crossover</option>
+                        <option value="Pickup">Pickup</option>
+                        <option value="Van">Van</option>
+                        <option value="Minivan">Minivan</option>
+                        <option value="Minibus">Minibus</option>
+                        <option value="Campervan">Campervan</option>
+                    {% endif %}
+                    {% if car.body == "Coupe" %}
+                        <option value="Micro">Micro</option>
+                        <option value="Sedan">Sedan</option>
+                        <option value="Hatchback">Hatchback</option>
+                        <option value="Universal">Universal</option>
+                        <option value="Liftback">Liftback</option>
+                        <option selected value="Coupe">Coupe</option>
+                        <option value="Cabriolet">Cabriolet</option>
+                        <option value="Roadster">Roadster</option>
+                        <option value="Targa">Targa</option>
+                        <option value="Limousine">Limousine</option>
+                        <option value="Muscle car">Muscle car</option>
+                        <option value="Sport car">Sport car</option>
+                        <option value="Super car">Super car</option>
+                        <option value="SUV">SUV</option>
+                        <option value="Crossover">Crossover</option>
+                        <option value="Pickup">Pickup</option>
+                        <option value="Van">Van</option>
+                        <option value="Minivan">Minivan</option>
+                        <option value="Minibus">Minibus</option>
+                        <option value="Campervan">Campervan</option>
+                    {% endif %}
+                    {% if car.body == "Cabriolet" %}
+                        <option value="Micro">Micro</option>
+                        <option value="Sedan">Sedan</option>
+                        <option value="Hatchback">Hatchback</option>
+                        <option value="Universal">Universal</option>
+                        <option value="Liftback">Liftback</option>
+                        <option value="Coupe">Coupe</option>
+                        <option selected value="Cabriolet">Cabriolet</option>
+                        <option value="Roadster">Roadster</option>
+                        <option value="Targa">Targa</option>
+                        <option value="Limousine">Limousine</option>
+                        <option value="Muscle car">Muscle car</option>
+                        <option value="Sport car">Sport car</option>
+                        <option value="Super car">Super car</option>
+                        <option value="SUV">SUV</option>
+                        <option value="Crossover">Crossover</option>
+                        <option value="Pickup">Pickup</option>
+                        <option value="Van">Van</option>
+                        <option value="Minivan">Minivan</option>
+                        <option value="Minibus">Minibus</option>
+                        <option value="Campervan">Campervan</option>
+                    {% endif %}
+                    {% if car.body == "Roadster" %}
+                        <option value="Micro">Micro</option>
+                        <option value="Sedan">Sedan</option>
+                        <option value="Hatchback">Hatchback</option>
+                        <option value="Universal">Universal</option>
+                        <option value="Liftback">Liftback</option>
+                        <option value="Coupe">Coupe</option>
+                        <option value="Cabriolet">Cabriolet</option>
+                        <option selected value="Roadster">Roadster</option>
+                        <option value="Targa">Targa</option>
+                        <option value="Limousine">Limousine</option>
+                        <option value="Muscle car">Muscle car</option>
+                        <option value="Sport car">Sport car</option>
+                        <option value="Super car">Super car</option>
+                        <option value="SUV">SUV</option>
+                        <option value="Crossover">Crossover</option>
+                        <option value="Pickup">Pickup</option>
+                        <option value="Van">Van</option>
+                        <option value="Minivan">Minivan</option>
+                        <option value="Minibus">Minibus</option>
+                        <option value="Campervan">Campervan</option>
+                    {% endif %}
+                    {% if car.body == "Targa" %}
+                        <option value="Micro">Micro</option>
+                        <option value="Sedan">Sedan</option>
+                        <option value="Hatchback">Hatchback</option>
+                        <option value="Universal">Universal</option>
+                        <option value="Liftback">Liftback</option>
+                        <option value="Coupe">Coupe</option>
+                        <option value="Cabriolet">Cabriolet</option>
+                        <option value="Roadster">Roadster</option>
+                        <option selected value="Targa">Targa</option>
+                        <option value="Limousine">Limousine</option>
+                        <option value="Muscle car">Muscle car</option>
+                        <option value="Sport car">Sport car</option>
+                        <option value="Super car">Super car</option>
+                        <option value="SUV">SUV</option>
+                        <option value="Crossover">Crossover</option>
+                        <option value="Pickup">Pickup</option>
+                        <option value="Van">Van</option>
+                        <option value="Minivan">Minivan</option>
+                        <option value="Minibus">Minibus</option>
+                        <option value="Campervan">Campervan</option>
+                    {% endif %}
+                    {% if car.body == "Limousine" %}
+                        <option value="Micro">Micro</option>
+                        <option value="Sedan">Sedan</option>
+                        <option value="Hatchback">Hatchback</option>
+                        <option value="Universal">Universal</option>
+                        <option value="Liftback">Liftback</option>
+                        <option value="Coupe">Coupe</option>
+                        <option value="Cabriolet">Cabriolet</option>
+                        <option value="Roadster">Roadster</option>
+                        <option value="Targa">Targa</option>
+                        <option selected value="Limousine">Limousine</option>
+                        <option value="Muscle car">Muscle car</option>
+                        <option value="Sport car">Sport car</option>
+                        <option value="Super car">Super car</option>
+                        <option value="SUV">SUV</option>
+                        <option value="Crossover">Crossover</option>
+                        <option value="Pickup">Pickup</option>
+                        <option value="Van">Van</option>
+                        <option value="Minivan">Minivan</option>
+                        <option value="Minibus">Minibus</option>
+                        <option value="Campervan">Campervan</option>
+                    {% endif %}
+                    {% if car.body == "Muscle car" %}
+                        <option value="Micro">Micro</option>
+                        <option value="Sedan">Sedan</option>
+                        <option value="Hatchback">Hatchback</option>
+                        <option value="Universal">Universal</option>
+                        <option value="Liftback">Liftback</option>
+                        <option value="Coupe">Coupe</option>
+                        <option value="Cabriolet">Cabriolet</option>
+                        <option value="Roadster">Roadster</option>
+                        <option value="Targa">Targa</option>
+                        <option value="Limousine">Limousine</option>
+                        <option selected value="Muscle car">Muscle car</option>
+                        <option value="Sport car">Sport car</option>
+                        <option value="Super car">Super car</option>
+                        <option value="SUV">SUV</option>
+                        <option value="Crossover">Crossover</option>
+                        <option value="Pickup">Pickup</option>
+                        <option value="Van">Van</option>
+                        <option value="Minivan">Minivan</option>
+                        <option value="Minibus">Minibus</option>
+                        <option value="Campervan">Campervan</option>
+                    {% endif %}
+                    {% if car.body == "Sport car" %}
+                        <option value="Micro">Micro</option>
+                        <option value="Sedan">Sedan</option>
+                        <option value="Hatchback">Hatchback</option>
+                        <option value="Universal">Universal</option>
+                        <option value="Liftback">Liftback</option>
+                        <option value="Coupe">Coupe</option>
+                        <option value="Cabriolet">Cabriolet</option>
+                        <option value="Roadster">Roadster</option>
+                        <option value="Targa">Targa</option>
+                        <option value="Limousine">Limousine</option>
+                        <option value="Muscle car">Muscle car</option>
+                        <option selected value="Sport car">Sport car</option>
+                        <option value="Super car">Super car</option>
+                        <option value="SUV">SUV</option>
+                        <option value="Crossover">Crossover</option>
+                        <option value="Pickup">Pickup</option>
+                        <option value="Van">Van</option>
+                        <option value="Minivan">Minivan</option>
+                        <option value="Minibus">Minibus</option>
+                        <option value="Campervan">Campervan</option>
+                    {% endif %}
+                    {% if car.body == "Super car" %}
+                        <option value="Micro">Micro</option>
+                        <option value="Sedan">Sedan</option>
+                        <option value="Hatchback">Hatchback</option>
+                        <option value="Universal">Universal</option>
+                        <option value="Liftback">Liftback</option>
+                        <option value="Coupe">Coupe</option>
+                        <option value="Cabriolet">Cabriolet</option>
+                        <option value="Roadster">Roadster</option>
+                        <option value="Targa">Targa</option>
+                        <option value="Limousine">Limousine</option>
+                        <option value="Muscle car">Muscle car</option>
+                        <option value="Sport car">Sport car</option>
+                        <option selected value="Super car">Super car</option>
+                        <option value="SUV">SUV</option>
+                        <option value="Crossover">Crossover</option>
+                        <option value="Pickup">Pickup</option>
+                        <option value="Van">Van</option>
+                        <option value="Minivan">Minivan</option>
+                        <option value="Minibus">Minibus</option>
+                        <option value="Campervan">Campervan</option>
+                    {% endif %}
+                    {% if car.body == "SUV" %}
+                        <option value="Micro">Micro</option>
+                        <option value="Sedan">Sedan</option>
+                        <option value="Hatchback">Hatchback</option>
+                        <option value="Universal">Universal</option>
+                        <option value="Liftback">Liftback</option>
+                        <option value="Coupe">Coupe</option>
+                        <option value="Cabriolet">Cabriolet</option>
+                        <option value="Roadster">Roadster</option>
+                        <option value="Targa">Targa</option>
+                        <option value="Limousine">Limousine</option>
+                        <option value="Muscle car">Muscle car</option>
+                        <option value="Sport car">Sport car</option>
+                        <option value="Super car">Super car</option>
+                        <option selected value="SUV">SUV</option>
+                        <option value="Crossover">Crossover</option>
+                        <option value="Pickup">Pickup</option>
+                        <option value="Van">Van</option>
+                        <option value="Minivan">Minivan</option>
+                        <option value="Minibus">Minibus</option>
+                        <option value="Campervan">Campervan</option>
+                    {% endif %}
+                    {% if car.body == "Crossover" %}
+                        <option value="Micro">Micro</option>
+                        <option value="Sedan">Sedan</option>
+                        <option value="Hatchback">Hatchback</option>
+                        <option value="Universal">Universal</option>
+                        <option value="Liftback">Liftback</option>
+                        <option value="Coupe">Coupe</option>
+                        <option value="Cabriolet">Cabriolet</option>
+                        <option value="Roadster">Roadster</option>
+                        <option value="Targa">Targa</option>
+                        <option value="Limousine">Limousine</option>
+                        <option value="Muscle car">Muscle car</option>
+                        <option value="Sport car">Sport car</option>
+                        <option value="Super car">Super car</option>
+                        <option value="SUV">SUV</option>
+                        <option selected value="Crossover">Crossover</option>
+                        <option value="Pickup">Pickup</option>
+                        <option value="Van">Van</option>
+                        <option value="Minivan">Minivan</option>
+                        <option value="Minibus">Minibus</option>
+                        <option value="Campervan">Campervan</option>
+                    {% endif %}
+                    {% if car.body == "Pickup" %}
+                        <option value="Micro">Micro</option>
+                        <option value="Sedan">Sedan</option>
+                        <option value="Hatchback">Hatchback</option>
+                        <option value="Universal">Universal</option>
+                        <option value="Liftback">Liftback</option>
+                        <option value="Coupe">Coupe</option>
+                        <option value="Cabriolet">Cabriolet</option>
+                        <option value="Roadster">Roadster</option>
+                        <option value="Targa">Targa</option>
+                        <option value="Limousine">Limousine</option>
+                        <option value="Muscle car">Muscle car</option>
+                        <option value="Sport car">Sport car</option>
+                        <option value="Super car">Super car</option>
+                        <option value="SUV">SUV</option>
+                        <option value="Crossover">Crossover</option>
+                        <option selected value="Pickup">Pickup</option>
+                        <option value="Van">Van</option>
+                        <option value="Minivan">Minivan</option>
+                        <option value="Minibus">Minibus</option>
+                        <option value="Campervan">Campervan</option>
+                    {% endif %}
+                    {% if car.body == "Van" %}
+                        <option value="Micro">Micro</option>
+                        <option value="Sedan">Sedan</option>
+                        <option value="Hatchback">Hatchback</option>
+                        <option value="Universal">Universal</option>
+                        <option value="Liftback">Liftback</option>
+                        <option value="Coupe">Coupe</option>
+                        <option value="Cabriolet">Cabriolet</option>
+                        <option value="Roadster">Roadster</option>
+                        <option value="Targa">Targa</option>
+                        <option value="Limousine">Limousine</option>
+                        <option value="Muscle car">Muscle car</option>
+                        <option value="Sport car">Sport car</option>
+                        <option value="Super car">Super car</option>
+                        <option value="SUV">SUV</option>
+                        <option value="Crossover">Crossover</option>
+                        <option value="Pickup">Pickup</option>
+                        <option selected value="Van">Van</option>
+                        <option value="Minivan">Minivan</option>
+                        <option value="Minibus">Minibus</option>
+                        <option value="Campervan">Campervan</option>
+                    {% endif %}
+                    {% if car.body == "Minivan" %}
+                        <option value="Micro">Micro</option>
+                        <option value="Sedan">Sedan</option>
+                        <option value="Hatchback">Hatchback</option>
+                        <option value="Universal">Universal</option>
+                        <option value="Liftback">Liftback</option>
+                        <option value="Coupe">Coupe</option>
+                        <option value="Cabriolet">Cabriolet</option>
+                        <option value="Roadster">Roadster</option>
+                        <option value="Targa">Targa</option>
+                        <option value="Limousine">Limousine</option>
+                        <option value="Muscle car">Muscle car</option>
+                        <option value="Sport car">Sport car</option>
+                        <option value="Super car">Super car</option>
+                        <option value="SUV">SUV</option>
+                        <option value="Crossover">Crossover</option>
+                        <option value="Pickup">Pickup</option>
+                        <option value="Van">Van</option>
+                        <option selected value="Minivan">Minivan</option>
+                        <option value="Minibus">Minibus</option>
+                        <option value="Campervan">Campervan</option>
+                    {% endif %}
+                    {% if car.body == "Minibus" %}
+                        <option value="Micro">Micro</option>
+                        <option value="Sedan">Sedan</option>
+                        <option value="Hatchback">Hatchback</option>
+                        <option value="Universal">Universal</option>
+                        <option value="Liftback">Liftback</option>
+                        <option value="Coupe">Coupe</option>
+                        <option value="Cabriolet">Cabriolet</option>
+                        <option value="Roadster">Roadster</option>
+                        <option value="Targa">Targa</option>
+                        <option value="Limousine">Limousine</option>
+                        <option value="Muscle car">Muscle car</option>
+                        <option value="Sport car">Sport car</option>
+                        <option value="Super car">Super car</option>
+                        <option value="SUV">SUV</option>
+                        <option value="Crossover">Crossover</option>
+                        <option value="Pickup">Pickup</option>
+                        <option value="Van">Van</option>
+                        <option value="Minivan">Minivan</option>
+                        <option selected value="Minibus">Minibus</option>
+                        <option value="Campervan">Campervan</option>
+                    {% endif %}
+                    {% if car.body == "Campervan" %}
+                        <option value="Micro">Micro</option>
+                        <option value="Sedan">Sedan</option>
+                        <option value="Hatchback">Hatchback</option>
+                        <option value="Universal">Universal</option>
+                        <option value="Liftback">Liftback</option>
+                        <option value="Coupe">Coupe</option>
+                        <option value="Cabriolet">Cabriolet</option>
+                        <option value="Roadster">Roadster</option>
+                        <option value="Targa">Targa</option>
+                        <option value="Limousine">Limousine</option>
+                        <option value="Muscle car">Muscle car</option>
+                        <option value="Sport car">Sport car</option>
+                        <option value="Super car">Super car</option>
+                        <option value="SUV">SUV</option>
+                        <option value="Crossover">Crossover</option>
+                        <option value="Pickup">Pickup</option>
+                        <option value="Van">Van</option>
+                        <option value="Minivan">Minivan</option>
+                        <option value="Minibus">Minibus</option>
+                        <option selected value="Campervan">Campervan</option>
+                    {% endif %}
+
+
+                </select>
+            </div>
+            <div class="div">
+                <h1>Count car seats </h1>
+                <input class="madalni_inputs" value="{{ car.seat }}" type="text" name="seats"
+                       placeholder="Enter caount car seats">
+            </div>
+            <div class="div">
+                <h1>Count car doors</h1>
+                <input class="madalni_inputs" type="text" value="{{ car.doors }}" name="doors"
+                       placeholder="Enter count car doors">
+            </div>
+            <div class="div">
+                <h1>Luggage</h1>
+                <input class="madalni_inputs" value="{{ car.looggage }}" type="text" name="luggage"
+                       placeholder="Enter luggage">
+            </div>
+            <div class="div">
+                <h1>Choice fuel types</h1>
+                <select class="madalni_inputs" name="fuel" id="">
+                    {% if car.fuel_type =="Electric" %}
+                        <option selected value="Electric">Electric</option>
+                        <option value="Gas">Gas</option>
+                        <option value="Diesel">Diesel</option>
+                        <option value="Gasoline">Gasoline</option>
+                    {% endif %}
+                    {% if car.fuel_type == "Gasoline" %}
+                        <option value="Electric">Electric</option>
+                        <option value="Gas">Gas</option>
+                        <option value="Diesel">Diesel</option>
+                        <option selected value="Gasoline">Gasoline</option>
+                    {% endif %}
+                    {% if car.fuel_type == "Diesel" %}
+                        <option value="Electric">Electric</option>
+                        <option value="Gas">Gas</option>
+                        <option selected value="Diesel">Diesel</option>
+                        <option value="Gasoline">Gasoline</option>
+                    {% endif %}
+                    {% if car.fuel_type == "Gas" %}
+                        <option value="Electric">Electric</option>
+                        <option selected value="Gas">Gas</option>
+                        <option value="Diesel">Diesel</option>
+                        <option value="Gasoline">Gasoline</option>
+                    {% endif %}
+                </select>
+            </div>
+            <div class="div">
+                <h1>Engine</h1>
+                <input class="madalni_inputs" value="{{ car.engine }}" type="text" name="engine"
+                       placeholder="Enter engine">
+            </div>
+            <div class="div">
+                <h1>Year</h1>
+                <input class="madalni_inputs" value="{{ car.year }}" type="text" name="year"
+                       placeholder="Enter car Year">
+            </div>
+            <div class="div">
+                <h1>Mileage</h1>
+                <input class="madalni_inputs" value="{{ car.milieage }}" type="text" name="mileage"
+                       placeholder="Enter Mileage">
+            </div>
+            <div class="div">
+                <h1>Choice car Transmission</h1>
+                <select class="madalni_inputs" name="transmission" id="">
+                    {% if car.transmission == 'Automatic' %}
+                        <option selected value="Automatic">Automatic</option>
+                        <option value="Mechanics">Mechanics</option>
+                    {% endif %}
+                    {% if car.transmission == 'Mechanics' %}
+                        <option value="Automatic">Automatic</option>
+                        <option selected value="Mechanics">Mechanics</option>
+                    {% endif %}
+                </select>
+            </div>
+            <div class="div">
+                <h1>Drive</h1>
+                <input class="madalni_inputs" value="{{ car.drive }}" type="text" name="drive"
+                       placeholder="Enter car Drive">
+            </div>
+            <div class="div">
+                <h1>Fuel Economy</h1>
+                <input class="madalni_inputs" type="text" value="{{ car.fuel_econmy }}" name="fuel_economy"
+                       placeholder="Enter car Fuel Economy">
+            </div>
+            <div class="div">
+                <h1>Exterior Color</h1>
+                <input class="madalni_inputs" value="{{ car.exterior_color }}" type="text" name="exterior_color"
+                       placeholder="Enter Exterior Color">
+            </div>
+            <div class="div">
+                <h1>Interior Color</h1>
+                <input class="madalni_inputs" value="{{ car.interir_color }}" type="text" name="interior_color"
+                       placeholder="Enter your name">
+            </div>
+            <div class="div">
+                <h1> Horse power </h1>
+                <input class="madalni_inputs" value="{{ car.horse }}" type="text" name="horse"
+                       placeholder="Enter Horse power">
+            </div>
+            <div class="div">
+                <h1>Car prise</h1>
+                <input class="madalni_inputs" value="{{ car.prise }}" name="prise" type="text"
+                       placeholder="Enter car prise">
+            </div>
+            <div class="div" style="width: 250px;height: 150px;">
+                <h1>Photo</h1>
+                <div class="div2"
+                     style="background: url({{ car.photo }});width: 250px; height: 150px; background-size: cover; position: relative;">
+                    <div style="background: url(https://freepngimg.com/save/20067-green-pencil-icon/512x512); width: 30px; height: 30px; background-size: cover; position: absolute; top: 5px;right: 10px;"
+                         class="edit">
+                        <input name="photo" style="width: 20px; height: 20px; background: #00b74a; opacity: 0;" type="file"></div>
+                </div>
+            </div>
+            <div class="div" style="width: 250px;height: 150px;">
+                <h1>Photo 2</h1>
+                <div class="div2"
+                     style="background: url({{ car.photo2 }});width: 250px; height: 150px; background-size: cover;position: relative">
+                    <div style="background: url(https://freepngimg.com/save/20067-green-pencil-icon/512x512); width: 30px; height: 30px; background-size: cover; position: absolute; top: 5px;right: 10px;"
+                         class="edit">
+                        <input name="photo2" style="width: 20px; height: 20px; background: #00b74a; opacity: 0;" type="file"></div>
+                </div>
+            </div>
+            <div class="div" style="width: 250px;height: 150px;">
+                <h1>Photo 3</h1>
+                <div class="div2"
+                     style="background: url({{ car.photo3 }});width: 250px; height: 150px; background-size: cover;position: relative">
+                    <div style="background: url(https://freepngimg.com/save/20067-green-pencil-icon/512x512); width: 30px; height: 30px; background-size: cover; position: absolute; top: 5px;right: 10px;"
+                         class="edit">
+                        <input name="photo3" style="width: 20px; height: 20px; background: #00b74a; opacity: 0;" type="file">
+                    </div>
+
+                </div>
+            </div>
+            <div class="div" style="width: 250px;height: 200px; margin-left: 59px;">
+                <h1>Photo 4</h1>
+                <div class="div2"
+                     style="background: url({{ car.photo4 }});width: 250px; height: 150px; background-size: cover; position: relative">
+                    <div style="background: url(https://freepngimg.com/save/20067-green-pencil-icon/512x512); width: 30px; height: 30px; background-size: cover; position: absolute; top: 5px;right: 10px;"
+                         class="edit">
+                        <input name="photo4" style="width: 20px; height: 20px; background: #00b74a; opacity: 0;" type="file"></div>
+                </div>
+            </div>
+
+            <div>
+                <h1>Touch button for Edit</h1>
+                <button style="background: #00b74a; color: white; font-size: 15px ; font-weight: 500">Edit</button>
+            </div>
+        </form>
+
+
+    </div>
+{% endblock %}

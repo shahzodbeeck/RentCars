@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/static/style/header.min.css">
+    <meta charset="UTF-8">
+<link rel="icon" type="image/png" sizes="32x32" href="../static/icons/logo-light.png">
+    <title>Rent Car</title>
+    {% block css %}
+
+    {% endblock %}
+{% if user %}
+  <style>
+  .log{
+      display: none;
+  }
+    </style>
+{% endif %}
+
+</head>
+<body>
+<header>
+    <nav>
+
+
+
+
+            <div class="icon">
+
+            </div>
+            <div class="links">
+                <a class="links_a" href="{{ url_for('hello_world') }}">Home</a>
+                <a class="links_a" href="{{ url_for('cars') }}">Cars</a>
+                <a class="links_a" href="{{ url_for('news') }}">News</a>
+               <a class="links_a" href="{{ url_for('brands') }}">Brands</a>
+            {% if user %}
+             {% if user.admin %}
+                 <a class="links_a" href="{{ url_for('order') }}">Orders</a>
+                {% endif %}
+            {% endif %}
+
+            </div>
+                 <div class="log">
+            <a class="log_a" href="{{ url_for('login') }}">Sign in</a>
+        </div>
+          {% if user %}
+              <a href="{{ url_for('profile') }}"> <img width="38px" height="38px" style="border-radius: 50%" src="{{ user.photo }}" alt="photo"></a>
+
+        {% endif %}
+
+    </nav>
+</header>
+
+{% block content %}
+{% endblock %}
+<script>
+
+    window.addEventListener("scroll", function () {
+        const fixedElement = document.querySelector("header");
+        const a = document.querySelectorAll(".links_a");
+        const offset = window.pageYOffset;
+
+        if (offset) {
+            fixedElement.style.visibility = `hidden`
+
+        } else {
+            fixedElement.style.visibility = `visible`
+            a[0].style.color = `#78ca5c`
+            a[1].style.color = `#78ca5c`
+            a[2].style.color = `#78ca5c`
+            fixedElement.style.position = `absolute`
+            fixedElement.style.background = `none`
+            fixedElement.style.top = `10px`
+            fixedElement.style.width = `0`
+        }
+    });
+
+</script>
+</body>
+</html>
